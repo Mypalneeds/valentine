@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babe Is This True ? </title>
+    <title>😱 Babe is it true?</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,7 +16,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #a31210 0%, #bd2e07 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
             min-height: 100vh;
         }
 
@@ -95,7 +95,7 @@
         .main-title {
             font-size: 3rem;
             font-weight: bold;
-            background: linear-gradient(135deg, #b90784 0%, #a40117 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #ff0844 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
@@ -114,7 +114,7 @@
         /* Big Heart */
         .big-heart {
             font-size: 8rem;
-            color: #f5576c;
+            color: #ff0844;
             margin: 30px 0;
             animation: heartBeat 1.5s infinite;
             cursor: pointer;
@@ -123,7 +123,7 @@
 
         .big-heart:hover {
             transform: scale(1.2) rotate(10deg);
-            filter: drop-shadow(0 0 20px #f5576c);
+            filter: drop-shadow(0 0 20px #ff0844);
         }
 
         @keyframes heartBeat {
@@ -156,53 +156,70 @@
             justify-content: center;
             margin-top: 40px;
             flex-wrap: wrap;
+            position: relative;
+            min-height: 150px;
+            width: 100%;
+            padding: 20px;
         }
 
         /* Yes Button */
         .btn-yes {
-            background: linear-gradient(135deg, #af0f0f 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
             border: none;
             color: white;
-            padding: 20px 60px;
-            font-size: 1.5rem;
+            padding: 15px 40px;
+            font-size: 1.2rem;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 8, 68, 0.5);
             animation: wiggle 2s infinite;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .btn-yes:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 8, 68, 0.7);
         }
 
         @keyframes wiggle {
             0%, 100% {
-                transform: rotate(0deg);
+                transform: translateX(-50%) rotate(0deg);
             }
             25% {
-                transform: rotate(-5deg);
+                transform: translateX(-50%) rotate(-5deg);
             }
             75% {
-                transform: rotate(5deg);
+                transform: translateX(-50%) rotate(5deg);
             }
         }
 
         /* No Button - Gets Smaller */
         .btn-no {
-            background: #ccc;
+            background: #555;
             border: none;
-            color: #666;
-            padding: 20px 60px;
-            font-size: 1.5rem;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 70px;
         }
 
         .btn-no:hover {
-            background: #bbb;
+            background: #444;
+        }
+
+        @media (max-width: 768px) {
+            .btn-yes, .btn-no {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
         }
 
         /* Success Screen */
@@ -227,7 +244,7 @@
 
         .success-message {
             font-size: 2.5rem;
-            color: #f5576c;
+            color: #ff0844;
             font-weight: bold;
             margin: 20px 0;
         }
@@ -241,7 +258,7 @@
 
         /* Screenshot Button */
         .screenshot-btn {
-            background: linear-gradient(135deg, #667eea 0%, #b81978 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
             border: none;
             color: white;
             padding: 15px 40px;
@@ -250,12 +267,12 @@
             cursor: pointer;
             margin-top: 30px;
             transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(111, 7, 97, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 8, 68, 0.4);
         }
 
         .screenshot-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(216, 46, 8, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 8, 68, 0.6);
         }
 
         /* Confetti */
@@ -340,7 +357,7 @@
 
         .feedback-input:focus {
             outline: none;
-            border-color: #f5576c;
+            border-color: #ff0844;
         }
 
         /* Sparkles */
@@ -361,17 +378,196 @@
             }
         }
 
+        /* Suspense Screen */
+        .suspense-screen {
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        .suspense-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .suspense-question {
+            font-size: 1.5rem;
+            color: #555;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .blurred-image-container {
+            position: relative;
+            margin: 40px auto;
+            max-width: 400px;
+            cursor: pointer;
+        }
+
+        .blurred-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            filter: blur(25px);
+            transition: all 0.5s;
+            box-shadow: 0 10px 40px rgba(255, 8, 68, 0.3);
+        }
+
+        .blurred-image::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+
+        .blurred-image:hover {
+            filter: blur(20px);
+            transform: scale(1.02);
+        }
+            box-shadow: 0 10px 40px rgba(255, 8, 68, 0.3);
+        }
+
+        .blurred-image:hover {
+            filter: blur(15px);
+            transform: scale(1.05);
+        }
+
+        .view-image-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            border: none;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255, 8, 68, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .view-image-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 8, 68, 0.7);
+        }
+
+        .warning-text {
+            font-size: 1rem;
+            color: #ff0844;
+            margin-top: 20px;
+            font-weight: 600;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            display: none;
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid #ffe5e5;
+            border-top: 8px solid #ff0844;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 40px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: #ff0844;
+            font-weight: 600;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        .loading-dots {
+            font-size: 2rem;
+            color: #ff6b6b;
+        }
+
+        .loading-dots span {
+            animation: blink 1.4s infinite;
+        }
+
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Hide question screen initially */
+        #questionScreen {
+            display: none;
+        }
+
+        /* Fade out animation */
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+
+        /* Pop in animation */
+        .pop-in {
+            animation: popInScreen 0.8s forwards;
+        }
+
+        @keyframes popInScreen {
+            from {
+                opacity: 0;
+                transform: scale(0.5) rotate(-10deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
         /* Instructions */
         .instructions {
             margin-top: 20px;
             padding: 15px;
-            background: #fff3cd;
+            background: #ffe5e5;
             border-radius: 10px;
-            border: 2px solid #ffc107;
+            border: 2px solid #ff6b6b;
         }
 
         .instructions i {
-            color: #ff6b6b;
+            color: #ff0844;
             margin-right: 10px;
         }
     </style>
@@ -383,6 +579,65 @@
     <!-- Main Container -->
     <div class="main-container">
         <div class="valentine-card" id="mainCard">
+            <!-- Suspense Screen - Shows First -->
+            <div id="suspenseScreen" class="suspense-screen">
+                <h1 class="suspense-title">
+                    😱 Babe, is it true?!
+                </h1>
+                
+                <p class="suspense-question">
+                    Are you really the one in this image?<br>
+                    I can't believe what I'm seeing... 😳
+                </p>
+                
+                <div class="blurred-image-container" onclick="revealImage()">
+                    <div class="blurred-image">
+                        <!-- Human silhouette overlay -->
+                        <svg width="200" height="300" style="position: absolute; opacity: 0.5;">
+                            <!-- Head -->
+                            <ellipse cx="100" cy="60" rx="50" ry="60" fill="white" opacity="0.6"/>
+                            <!-- Body -->
+                            <rect x="60" y="120" width="80" height="120" rx="40" fill="white" opacity="0.6"/>
+                            <!-- Arms -->
+                            <rect x="30" y="140" width="30" height="80" rx="15" fill="white" opacity="0.6"/>
+                            <rect x="140" y="140" width="30" height="80" rx="15" fill="white" opacity="0.6"/>
+                            <!-- Legs -->
+                            <rect x="70" y="220" width="30" height="70" rx="15" fill="white" opacity="0.6"/>
+                            <rect x="100" y="220" width="30" height="70" rx="15" fill="white" opacity="0.6"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <button class="view-image-btn" onclick="revealImage()">
+                    <i class="fas fa-eye"></i> View Image
+                </button>
+                
+                <p class="warning-text">
+                    ⚠️ Click to reveal the truth...
+                </p>
+            </div>
+
+            <!-- Loading Screen -->
+            <div id="loadingScreen" class="loading-screen">
+                <h2 class="suspense-title">
+                    🔍 Analyzing Image...
+                </h2>
+                
+                <div class="loading-spinner"></div>
+                
+                <p class="loading-text">
+                    Processing facial recognition
+                </p>
+                
+                <div class="loading-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+                
+                <p style="color: #ff6b6b; margin-top: 20px; font-size: 1rem;">
+                    <i class="fas fa-fingerprint"></i> Verifying identity...
+                </p>
+            </div>
+
             <!-- Initial Question Screen -->
             <div id="questionScreen">
                 <div class="sparkle" style="top: 20px; left: 30px;">✨</div>
@@ -403,16 +658,16 @@
                 </p>
                 
                 <div class="button-container">
-                    <button class="btn btn-yes" onclick="yesClicked()">
+                    <button class="btn btn-yes" id="yesBtn" onmouseover="yesHover()" onclick="yesClicked(event)">
                         <i class="fas fa-heart"></i> YES! 
                     </button>
-                    <button class="btn btn-no" id="noBtn" onclick="noClicked()">
+                    <button class="btn btn-no" id="noBtn" onmouseover="noHover()" onclick="noClicked(event)">
                         <i class="fas fa-times"></i> No
                     </button>
                 </div>
                 
-                <div class="mt-4" style="color: #999; font-size: 0.9rem;">
-                    <i class="fas fa-info-circle"></i> Hint: The "No" button is shy... 😏
+                <div class="mt-4" style="color: #fff; font-size: 0.9rem;">
+                    <i class="fas fa-info-circle"></i> Hint: The buttons are feeling playful today... 😏
                 </div>
             </div>
 
@@ -457,6 +712,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     
     <script>
+        // Reveal image function - transitions to valentine question
+        function revealImage() {
+            const suspenseScreen = document.getElementById('suspenseScreen');
+            const loadingScreen = document.getElementById('loadingScreen');
+            const questionScreen = document.getElementById('questionScreen');
+            
+            // Add fade out animation to suspense screen
+            suspenseScreen.classList.add('fade-out');
+            
+            // After fade out, show loading screen
+            setTimeout(() => {
+                suspenseScreen.style.display = 'none';
+                loadingScreen.style.display = 'block';
+                loadingScreen.classList.add('pop-in');
+                
+                // Simulate processing time with messages
+                setTimeout(() => {
+                    showPopup('🔍 Scanning image... 👀');
+                }, 500);
+                
+                setTimeout(() => {
+                    showPopup('🤔 Hmm... something doesn\'t look right... 😱');
+                }, 2000);
+                
+                setTimeout(() => {
+                    showPopup('😂 Wait a minute... This isn\'t what I thought! 🙈');
+                }, 3500);
+                
+                // After loading (5 seconds total), show valentine question
+                setTimeout(() => {
+                    loadingScreen.classList.add('fade-out');
+                    
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        questionScreen.style.display = 'block';
+                        questionScreen.classList.add('pop-in');
+                        
+                        // Show the reveal popup
+                        setTimeout(() => {
+                            showPopup('💕 Just kidding! But I do have an important question for you... 💖');
+                        }, 300);
+                    }, 800);
+                }, 5000);
+            }, 800);
+        }
+        
         // Create floating hearts background
         function createFloatingHearts() {
             const heartBg = document.getElementById('heartBg');
@@ -525,51 +826,153 @@
 
         // No button interaction - gets smaller and moves
         let noClickCount = 0;
-        function noClicked() {
+        let noHoverCount = 0;
+        
+        function noHover() {
+            const noBtn = document.getElementById('noBtn');
+            const container = document.querySelector('.button-container');
+            const containerRect = container.getBoundingClientRect();
+            
+            noHoverCount++;
+            
+            // Button runs away on hover!
+            if (noHoverCount >= 1) {
+                // Calculate safe bounds within container
+                const btnWidth = noBtn.offsetWidth;
+                const btnHeight = noBtn.offsetHeight;
+                const maxX = containerRect.width - btnWidth - 20;
+                const maxY = 100; // Keep it in reasonable vertical range
+                
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+                
+                noBtn.style.left = randomX + 'px';
+                noBtn.style.top = randomY + 'px';
+                noBtn.style.transform = 'none';
+                noBtn.style.transition = 'all 0.3s ease';
+                
+                if (noHoverCount === 1) {
+                    showPopup('😂 Did you really think I\'d let you click NO? Try again! 💔');
+                } else if (noHoverCount === 3) {
+                    showPopup('🤣 The NO button is playing hard to get! 😜');
+                } else if (noHoverCount === 5) {
+                    showPopup('😏 Maybe try the other button? Just saying... 💕');
+                }
+            }
+        }
+        
+        function noClicked(event) {
+            event.preventDefault();
             noClickCount++;
             const noBtn = document.getElementById('noBtn');
             
+            // Even if they manage to click it, it refuses!
             if (noClickCount === 1) {
-                noBtn.textContent = '❌ Are you sure?';
-                noBtn.style.transform = 'scale(0.9)';
-                showPopup('🥺 Are you really sure? Please reconsider! 💔');
+                noBtn.innerHTML = '<i class="fas fa-times"></i> 😤 Nope!';
+                noBtn.style.transform = 'scale(0.9) rotate(360deg)';
+                showPopup('🙅‍♀️ Nice try! But NO is not an option here! 😂');
             } else if (noClickCount === 2) {
-                noBtn.textContent = '😢 Really?';
-                noBtn.style.transform = 'scale(0.8)';
-                showPopup('😭 My heart is breaking... Please say yes! 💔');
-            } else if (noClickCount === 3) {
-                noBtn.textContent = '🥺 Please?';
-                noBtn.style.transform = 'scale(0.7)';
-                showPopup('😢 I promise to be the best Valentine ever! 🌹');
-            } else if (noClickCount >= 4) {
-                // Button gets so small and runs away
-                noBtn.style.transform = 'scale(0.5)';
-                noBtn.style.position = 'absolute';
-                noBtn.style.left = Math.random() * 60 + 20 + '%';
-                noBtn.style.top = Math.random() * 40 + 30 + '%';
-                showPopup('😂 The "No" button is running away! Just click YES! 💕');
+                noBtn.innerHTML = '🏃‍♂️ Catch me!';
+                noBtn.style.transform = 'scale(0.7) rotate(720deg)';
+                showPopup('😂 The button is literally running away from you! 🏃‍♂️💨');
+            } else if (noClickCount >= 3) {
+                noBtn.style.opacity = '0';
+                noBtn.style.pointerEvents = 'none';
+                showPopup('✨ The NO button has disappeared! Looks like YES is your only option! 😉💕');
+            }
+        }
+
+        // Yes button interaction - also playful at first!
+        let yesHoverCount = 0;
+        let yesClickCount = 0;
+        
+        function yesHover() {
+            const yesBtn = document.getElementById('yesBtn');
+            const container = document.querySelector('.button-container');
+            const containerRect = container.getBoundingClientRect();
+            
+            yesHoverCount++;
+            
+            // YES button also runs away at first!
+            if (yesHoverCount <= 3) {
+                // Calculate safe bounds
+                const btnWidth = yesBtn.offsetWidth;
+                const btnHeight = yesBtn.offsetHeight;
+                const maxX = containerRect.width - btnWidth - 20;
+                const maxY = 100;
+                
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+                
+                yesBtn.style.left = randomX + 'px';
+                yesBtn.style.top = randomY + 'px';
+                yesBtn.style.transform = 'none';
+                yesBtn.style.transition = 'all 0.3s ease';
+                
+                if (yesHoverCount === 1) {
+                    showPopup('😈 Oh no! Even the YES button is running away! 😱');
+                } else if (yesHoverCount === 2) {
+                    showPopup('🤪 Both buttons are playing with you! Keep trying! 💪');
+                } else if (yesHoverCount === 3) {
+                    showPopup('🎯 Almost there! The YES button is getting tired... 😅');
+                }
+            } else if (yesHoverCount === 4) {
+                // After 4 hovers, YES button gets easier - center it
+                yesBtn.style.left = '50%';
+                yesBtn.style.top = '0';
+                yesBtn.style.transform = 'translateX(-50%) scale(1.2)';
+                yesBtn.style.transition = 'all 0.5s ease';
+                showPopup('💝 Okay fine! The YES button is ready now! Click it quick! ⚡');
+            } else {
+                // Make it even bigger and more tempting
+                const scale = 1.2 + (yesHoverCount - 4) * 0.1;
+                yesBtn.style.transform = 'translateX(-50%) scale(' + scale + ')';
             }
         }
 
         // Yes button clicked
-        function yesClicked() {
-            // Hide question screen
-            document.getElementById('questionScreen').style.display = 'none';
+        function yesClicked(event) {
+            event.preventDefault();
+            yesClickCount++;
             
-            // Show success screen
-            const successScreen = document.getElementById('successScreen');
-            successScreen.style.display = 'block';
+            // Need to hover it enough times first!
+            if (yesHoverCount < 4) {
+                showPopup('😏 Not so fast! You need to catch the YES button first! Keep hovering! 🎯');
+                return;
+            }
             
-            // Create confetti explosion
-            createConfetti();
+            // First click - are they sure?
+            if (yesClickCount === 1) {
+                showPopup('🤔 Wait, are you SURE you want to say YES? Click again to confirm! 💕');
+                return;
+            }
             
-            // Play celebration animation
-            celebrateSuccess();
+            // Second click - really sure?
+            if (yesClickCount === 2) {
+                showPopup('😊 One more time to make it official! Third time\'s the charm! 💖');
+                return;
+            }
+            
+            // Third click - SUCCESS!
+            if (yesClickCount >= 3) {
+                // Hide question screen
+                document.getElementById('questionScreen').style.display = 'none';
+                
+                // Show success screen
+                const successScreen = document.getElementById('successScreen');
+                successScreen.style.display = 'block';
+                
+                // Create confetti explosion
+                createConfetti();
+                
+                // Play celebration animation
+                celebrateSuccess();
+            }
         }
 
         // Create confetti
         function createConfetti() {
-            const colors = ['#f5576c', '#f093fb', '#667eea', '#764ba2', '#ffd700', '#ff69b4'];
+            const colors = ['#ff6b6b', '#ff0844', '#ee5a6f', '#c44569', '#ff1744', '#ff4081'];
             
             for (let i = 0; i < 150; i++) {
                 setTimeout(() => {
@@ -595,8 +998,8 @@
         function celebrateSuccess() {
             showPopup('🎊 YESSS! This is the best day ever! 💖');
             
-            // Change background gradient
-            document.body.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            // Change background gradient to even more red
+            document.body.style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ff0844 50%, #ee5a6f 100%)';
         }
 
         // Show popup message
